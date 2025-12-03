@@ -1,0 +1,324 @@
+.menu {
+    width: 360px;
+    height: 720px;
+
+    background-image: url("..img / image 1.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hello{
+    font-size: 110.8px;
+    font-family: 'Lily Script One', cursive;
+    color: black;
+
+}
+.lubimaya{
+    font-size: 72.07px;
+    font-family: 'Lily Script One', cursive;
+    color: #AB1919;
+    margin-top: -50px;
+}
+.btn{
+    border: 3.76px solid red;
+    border-radius: 34.5px;
+    width: 239px;
+    height: 46.42px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color:#D9D9D9;
+    font-family: 'Days One', sans-serif;    
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* Центрирование */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Фон и шрифт */
+    background: #eaeaea;
+    font-family: sans-serif;
+}
+
+
+
+/* Верхний контейнер */
+.menu2{
+    width: 360px;
+    height: 720px;
+
+    background-image: url("..img/image 1.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-top: 20px;
+}
+
+/* Текст */
+.opi{
+    font-family: 'Lily Script One', cursive;
+    font-size: 46px;
+    color: #AB1919;
+    margin-bottom: 20px;
+}
+
+/* Сетка 2×2 для кнопок */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.container a {
+    display: block;
+}
+
+/* Кнопки */
+.container button {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #AB1919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform .14s ease, box-shadow .14s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    outline: none;
+}
+
+/* Иконки */
+.btn-image { background-image: url("./img/Picture.png"); }
+.btn-video { background-image: url("./img/Live_Video On.png"); }
+.btn-musik { background-image: url("./img/Add_Song.png"); }
+.btn-mail  { background-image: url("./img/Letter.png"); }
+
+/* Hover/Active */
+.container button:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.container button:active {
+    transform: scale(.98);
+}
+
+/* Мобильная версия */
+@media (max-width: 380px) {
+    .container { padding: 24px 18px; }
+    .container button { width: 100px; height: 100px; border-radius: 14px; }
+}
+
+
+
+
+/* ТЕЛЕФОННЫЙ ФОН */
+
+
+
+
+/* ОСНОВНОЙ БЛОК */
+.photo-section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ФОТО-БЛОКИ */
+.photo {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* СЕТКА С МАЛЕНЬКИМИ ФОТО */
+.photo-row {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 20px auto; /* добавлен нижний отступ */
+}
+
+.photo-row-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-row img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ВЫСОТЫ КРУПНЫХ ФОТО */
+.big img {
+    height: 260px;
+}
+
+.medium {
+    margin-top: 20px;  /* отступ сверху, чтобы отделить от верхних маленьких фото */
+}
+
+.medium img {
+    height: 220px;
+}
+
+/* АДАПТИВ ДЛЯ УЗКИХ ЭКРАНОВ */
+@media (max-width: 360px) {
+    .photo-row-3 {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+    }
+
+    .photo-row img {
+        height: 120px;
+    }
+}
+
+
+
+.my-video{
+  width: 100%;        /* ширина адаптивная */
+  max-width: 640px;   /* максимальная ширина */
+  height: auto;       /* сохраняет пропорции */
+  margin: 20px auto;  /* отступы сверху/снизу и центрирование */
+  display: block;     /* чтобы margin: auto работал */
+  border-radius: 20px; /* скругленные углы (по желанию) */
+}
+.poster{
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background: #DBDBDB;
+}
+
+/* Контейнер */
+.phto-music {
+    width: 100%;
+    max-width: 420px;     /* макс. ширина как у iPhone */
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url("image 1.png");
+}
+
+/* Фото */
+.cover {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+/* Заголовок */
+.song-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.song-info h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.song-name {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+/* Аудио */
+audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Колонки с текстом */
+.lyrics {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Две колонки */
+.col, .col-2 {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 360px) {
+
+    .lyrics {
+        flex-direction: column; /* При очень маленьких экранах текст станет в один столбец */
+    }
+
+    .col, .col-2 {
+        width: 100%;
+    }
+}
+.sms-cod{
+    width: 100%;
+    max-width: 420px;     /* макс. ширина как у iPhone */
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url("image 1.png"); 
+    
+}
+.img-sms{
+    padding: 40px;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+
+}
+.text-sms{
+    font-size: 15px;
+}
+.red{
+    color: #AB1919;
+}
+
+
+

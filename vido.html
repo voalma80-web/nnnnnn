@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lubimaya</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="vvv">
+        <video id="myVideo" class="my-video" controls poster="">
+            <source src="./vd/2025-11-30 23.27.03.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        const video = document.getElementById('myVideo');
+
+        // Когда метаданные загружены (разрешение, длительность)
+        video.addEventListener('loadedmetadata', () => {
+            // перематываем на 0.1 сек, чтобы декодировать реальный кадр
+            video.currentTime = 0.1;
+        });
+
+        // Когда перемотка завершена и кадр готов
+        video.addEventListener('seeked', () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // получаем изображение (первый кадр) и ставим как poster
+            const dataURL = canvas.toDataURL("image/png");
+            video.setAttribute('poster', dataURL);
+        });
+    </script>
+
+</body>
+</html>
